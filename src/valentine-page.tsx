@@ -188,16 +188,12 @@ export default function ValentinePage() {
       <style jsx>{`
         .valentine-container {
           min-height: 100vh;
-          background: linear-gradient(
-            135deg,
-            #fce7f3 0%,
-            #fdf2f8 50%,
-            #fecaca 100%
-          );
+          background: linear-gradient(135deg, #111827, #1f2937);
           position: relative;
           overflow: hidden;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
             sans-serif;
+          color: #e5e7eb;
         }
 
         .hearts-background {
@@ -209,14 +205,14 @@ export default function ValentinePage() {
         .floating-heart {
           position: absolute;
           animation: float 6s ease-in-out infinite;
-          opacity: 0.2;
+          opacity: 0.15;
         }
 
         .heart-icon {
           width: 16px;
           height: 16px;
-          color: #f472b6;
-          fill: #f472b6;
+          color: #d1d5db;
+          fill: #d1d5db;
         }
 
         .content-wrapper {
@@ -236,7 +232,7 @@ export default function ValentinePage() {
         .main-title {
           font-size: clamp(2.5rem, 5vw, 4rem);
           font-weight: bold;
-          background: linear-gradient(45deg, #dc2626, #e11d48);
+          background: linear-gradient(45deg, #d1d5db, #f3f4f6);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -254,14 +250,14 @@ export default function ValentinePage() {
         .pulse-heart {
           width: 24px;
           height: 24px;
-          color: #ec4899;
-          fill: #ec4899;
+          color: #f3f4f6;
+          fill: #f3f4f6;
           animation: pulse 2s infinite;
         }
 
         .subtitle-text {
           font-size: 18px;
-          color: #6b7280;
+          color: #9ca3af;
           font-weight: 500;
         }
 
@@ -271,11 +267,10 @@ export default function ValentinePage() {
         }
 
         .carousel-wrapper {
-          background: white;
+          background: #1f2937;
           border-radius: 24px;
-          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 25px 50px -12px rgba(255, 255, 255, 0.05);
           padding: 24px;
-          transform: scale(1);
           transition: transform 0.3s ease;
         }
 
@@ -303,13 +298,14 @@ export default function ValentinePage() {
           transition: all 0.5s ease;
           display: block;
           margin: 0 auto;
+          border-radius: 12px;
         }
 
         .nav-button {
           position: absolute;
           top: 50%;
           transform: translateY(-50%);
-          background: rgba(255, 255, 255, 0.8);
+          background: rgba(255, 255, 255, 0.1);
           border: none;
           border-radius: 50%;
           width: 48px;
@@ -318,12 +314,12 @@ export default function ValentinePage() {
           align-items: center;
           justify-content: center;
           cursor: pointer;
-          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
           transition: background-color 0.2s;
         }
 
         .nav-button:hover {
-          background: rgba(255, 255, 255, 0.9);
+          background: rgba(255, 255, 255, 0.15);
         }
 
         .nav-left {
@@ -337,7 +333,7 @@ export default function ValentinePage() {
         .nav-icon {
           width: 24px;
           height: 24px;
-          color: #374151;
+          color: #d1d5db;
         }
 
         .image-counter {
@@ -345,165 +341,141 @@ export default function ValentinePage() {
           bottom: 16px;
           left: 50%;
           transform: translateX(-50%);
-          background: rgba(0, 0, 0, 0.5);
-          color: white;
+          background: rgba(31, 41, 55, 0.7);
+          color: #f3f4f6;
           padding: 4px 12px;
-          border-radius: 20px;
+          border-radius: 8px;
           font-size: 14px;
         }
 
         .dots-container {
+          margin-top: 16px;
           display: flex;
           justify-content: center;
-          margin-top: 24px;
           gap: 8px;
         }
 
         .dot {
-          width: 12px;
-          height: 12px;
+          width: 10px;
+          height: 10px;
+          background-color: #4b5563;
           border-radius: 50%;
-          border: none;
-          background: #d1d5db;
-          cursor: pointer;
-          transition: all 0.3s ease;
-        }
-
-        .dot:hover {
-          background: #9ca3af;
+          transition: background-color 0.3s;
         }
 
         .dot-active {
-          background: #ec4899;
-          transform: scale(1.25);
+          background-color: #f3f4f6;
         }
 
         .letter-container {
-          max-width: 768px;
-          margin: 0 auto;
-        }
-
-        .letter-wrapper {
-          background: rgba(255, 255, 255, 0.9);
-          backdrop-filter: blur(10px);
+          margin-top: 48px;
+          background: #111827;
+          padding: 32px;
           border-radius: 24px;
-          box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-          padding: clamp(32px, 5vw, 48px);
-          border: 1px solid #fce7f3;
+          box-shadow: 0 10px 25px rgba(255, 255, 255, 0.03);
         }
 
         .letter-header {
           text-align: center;
-          margin-bottom: 32px;
+          margin-bottom: 24px;
         }
 
         .letter-heart {
-          width: 48px;
-          height: 48px;
-          color: #dc2626;
-          fill: #dc2626;
-          margin: 0 auto 16px;
-          animation: pulse 2s infinite;
-        }
-
-        .letter-title {
-          font-size: 32px;
-          font-weight: bold;
-          color: #1f2937;
+          width: 32px;
+          height: 32px;
+          color: #f3f4f6;
+          fill: #f3f4f6;
           margin-bottom: 8px;
         }
 
+        .letter-title {
+          font-size: 24px;
+          font-weight: 600;
+          color: #e5e7eb;
+        }
+
         .letter-divider {
-          width: 96px;
+          width: 60px;
           height: 4px;
-          background: linear-gradient(90deg, #f472b6, #dc2626);
-          margin: 0 auto;
+          background-color: #4b5563;
+          margin: 12px auto 0;
           border-radius: 2px;
         }
 
         .letter-content {
+          font-size: 16px;
+          color: #d1d5db;
           line-height: 1.8;
-          color: #374151;
+          text-align: center;
         }
 
         .letter-quote {
-          font-size: 20px;
-          text-align: center;
           font-style: italic;
-          margin-bottom: 24px;
-          color: #1f2937;
+          color: #f9fafb;
+          margin-bottom: 16px;
         }
 
         .letter-paragraph {
           margin-bottom: 16px;
-          font-size: 16px;
         }
 
         .letter-signature {
-          text-align: center;
-          font-size: 20px;
-          font-weight: 600;
-          color: #dc2626;
-          margin-top: 32px;
-          margin-bottom: 16px;
+          font-weight: bold;
+          margin-top: 24px;
+          color: #f3f4f6;
         }
 
         .letter-closing {
-          text-align: center;
+          margin-top: 8px;
           font-size: 18px;
-          color: #6b7280;
-          font-style: italic;
+          color: #e5e7eb;
         }
 
         .footer-section {
-          text-align: center;
           margin-top: 48px;
-          padding-bottom: 32px;
+          text-align: center;
         }
 
         .footer-hearts {
           display: flex;
           justify-content: center;
-          align-items: center;
-          gap: 16px;
+          gap: 12px;
+          margin-top: 24px;
         }
 
         .bounce-heart {
-          color: #ec4899;
-          fill: #ec4899;
-          animation: bounce 2s infinite;
+          width: 20px;
+          height: 20px;
+          color: #d1d5db;
+          animation: bounce 1.5s infinite;
         }
 
         .bounce-small {
-          width: 24px;
-          height: 24px;
-        }
-
-        .bounce-heart:not(.bounce-small):not(.bounce-large) {
-          width: 32px;
-          height: 32px;
+          animation-duration: 2s;
         }
 
         .bounce-large {
-          width: 40px;
-          height: 40px;
-          color: #db2777;
-          fill: #db2777;
+          animation-duration: 1s;
         }
 
         @keyframes float {
+          0% {
+            transform: translateY(100vh);
+          }
+          100% {
+            transform: translateY(-10vh);
+          }
+        }
+
+        @keyframes pulse {
           0%,
           100% {
-            transform: translateY(0px) rotate(0deg);
-          }
-          25% {
-            transform: translateY(-20px) rotate(5deg);
+            transform: scale(1);
+            opacity: 1;
           }
           50% {
-            transform: translateY(-10px) rotate(-5deg);
-          }
-          75% {
-            transform: translateY(-15px) rotate(3deg);
+            transform: scale(1.2);
+            opacity: 0.7;
           }
         }
 
@@ -518,33 +490,13 @@ export default function ValentinePage() {
           }
         }
 
-        @keyframes pulse {
-          0%,
-          100% {
-            transform: scale(1);
-          }
-          50% {
-            transform: scale(1.1);
-          }
-        }
-
         @keyframes bounce {
           0%,
-          20%,
-          53%,
-          80%,
           100% {
             transform: translateY(0);
           }
-          40%,
-          43% {
+          50% {
             transform: translateY(-10px);
-          }
-          70% {
-            transform: translateY(-5px);
-          }
-          90% {
-            transform: translateY(-2px);
           }
         }
       `}</style>
