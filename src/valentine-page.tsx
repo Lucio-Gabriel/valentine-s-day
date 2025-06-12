@@ -121,34 +121,33 @@ export default function ValentinePage() {
           <div className="letter-wrapper">
             <div className="letter-header">
               <Heart className="letter-heart" />
-              <h2 className="letter-title">Carta de Amor</h2>
+              <h2 className="letter-title">Carta ao meu Amor</h2>
               <div className="letter-divider"></div>
             </div>
 
             <div className="letter-content">
               <p className="letter-quote">
-                "Meu amor, cada foto nossa conta uma história..."
+                "Meu príncipe, cada foto nossa conta uma história..."
               </p>
 
               <p className="letter-paragraph">
                 Desde o primeiro momento em que nossos olhares se cruzaram, eu
-                soube que você era especial. Cada dia ao seu lado é uma nova
-                aventura, um novo motivo para sorrir e agradecer por ter você na
-                minha vida.
+                ja sabia que você era para mim. Cada dia ao seu lado é a certeza
+                de um futuro pleno, de uma amor firmado na rocha.
               </p>
 
               <p className="letter-paragraph">
                 Nossas memórias são como estrelas no céu - brilham eternamente e
                 me guiam nos momentos mais escuros. Cada risada compartilhada,
-                cada abraço apertado, cada "eu te amo" sussurrado se tornou
-                parte de quem eu sou.
+                cada abraço apertado, cada "eu te amo, princesa" sussurrado se
+                tornou parte de quem eu sou.
               </p>
 
               <p className="letter-paragraph">
-                Você não é apenas minha namorada, você é minha melhor amiga,
-                minha companheira de sonhos, minha fonte de inspiração. Com
-                você, descobri que o amor verdadeiro não é apenas um sentimento,
-                é uma escolha que faço todos os dias.
+                Com você, descobri que o amor verdadeiro não é apenas um
+                sentimento, é um mandamento, é uma escolha… E eu escolho te amar
+                como Cristo amou a igreja todos os dias da minha vida, até que
+                ele venha!
               </p>
 
               <p className="letter-signature">
@@ -299,11 +298,11 @@ export default function ValentinePage() {
 
         .carousel-image {
           width: 60%;
-  height: 100%;
-  object-fit: cover;
-  transition: all 0.5s ease;
-  display: block;
-  margin: 0 auto;
+          height: 100%;
+          object-fit: cover;
+          transition: all 0.5s ease;
+          display: block;
+          margin: 0 auto;
         }
 
         .nav-button {
